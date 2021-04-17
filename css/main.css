@@ -1,0 +1,152 @@
+* {
+  margin: 0; }
+
+body {
+  background-color: #5e5e5e;
+  height: 100%;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif; }
+  body#background {
+    background: url(../img/background.jpg);
+    background-attachment: fixed;
+    background-size: cover; }
+    body#background::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(94, 94, 94, 0.5);
+      z-index: -1; }
+
+.header {
+  position: fixed;
+  width: 100%; }
+
+.button-wrap {
+  position: absolute;
+  padding: 0.5rem;
+  right: 40px;
+  top: 20px;
+  cursor: pointer;
+  z-index: 3;
+  transition: all 0.5s ease-out; }
+  .button-wrap .button-line {
+    height: 3px;
+    width: 30px;
+    background-color: white;
+    margin-bottom: 5px;
+    transition: all 0.5s ease-out; }
+  .button-wrap.close {
+    transform: rotate(180deg);
+    transition: all 0.5s ease-out; }
+    .button-wrap.close .button-line:nth-child(1) {
+      transform: rotate(45deg) translate(20%); }
+    .button-wrap.close .button-line:nth-child(2) {
+      display: none; }
+    .button-wrap.close .button-line:nth-child(3) {
+      transform: rotate(135deg) translate(-18%); }
+
+.menu {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  opacity: 0.95;
+  overflow: hidden;
+  visibility: hidden;
+  z-index: 3; }
+  .menu.show {
+    visibility: visible; }
+  .menu .portrait,
+  .menu .navigation {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    text-align: center; }
+  .menu .portrait {
+    background: #454545;
+    display: flex;
+    transform: translate3d(0, -100%, 0);
+    transition: all 0.5s ease-out; }
+    .menu .portrait.show {
+      transform: translate3d(0, 0, 0); }
+    .menu .portrait .eyeball-game {
+      position: relative; }
+      .menu .portrait .eyeball-game .portrait-img {
+        border-radius: 50%;
+        height: 20vw;
+        width: 20vw;
+        border: 5px solid purple; }
+      .menu .portrait .eyeball-game .eye {
+        position: absolute;
+        top: 34%;
+        transform: rotate(-15deg);
+        left: 43%;
+        width: 2vw;
+        height: 1.5vw;
+        background: white;
+        overflow: hidden;
+        border-radius: 50%; }
+        .menu .portrait .eyeball-game .eye .ball {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          width: 0.6vw;
+          height: 0.6vw;
+          background: black;
+          border-radius: 50%;
+          border: 0.2vw solid #474747; }
+  .menu .navigation {
+    align-items: flex-start;
+    background: #565656;
+    transform: translate3d(0, 100%, 0);
+    overflow: hidden;
+    transition: all 0.5s ease-out; }
+    .menu .navigation.show {
+      transform: translate3d(0, 0, 0); }
+    .menu .navigation .show {
+      transform: translate3d(0, 0, 0); }
+  .menu .navigation-listItem {
+    transform: translate3d(1500px, 0, 0);
+    transition: all 0.5s ease-out;
+    list-style: none;
+    margin: 1rem 0 1rem 2rem; }
+    .menu .navigation-listItem.show {
+      transform: translate3d(0, 0, 0); }
+    .menu .navigation-listItem .navigation-link {
+      text-decoration: none;
+      color: white;
+      font-weight: bold;
+      font-size: 2rem;
+      transition: all 0.5s ease-out; }
+      .menu .navigation-listItem .navigation-link:hover {
+        transition: all 0.5s ease-out;
+        color: purple;
+        font-size: 3rem;
+        -webkit-text-stroke: white 0.5px; }
+
+main#home {
+  overflow: hidden;
+  text-align: center; }
+  main#home h1 {
+    color: white;
+    margin-top: 20vh; }
+
+.navigation-listItem:nth-child(1) {
+  transition-delay: 0.12s; }
+
+.navigation-listItem:nth-child(2) {
+  transition-delay: 0.24s; }
+
+.navigation-listItem:nth-child(3) {
+  transition-delay: 0.36s; }
+
+.navigation-listItem:nth-child(4) {
+  transition-delay: 0.48s; }
