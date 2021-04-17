@@ -150,3 +150,25 @@ main#home {
 
 .navigation-listItem:nth-child(4) {
   transition-delay: 0.48s; }
+
+@media screen and (max-width: 600px) {
+  .menu .portrait .eyeball-game .portrait-img {
+    height: 35vw;
+    width: 35vw; }
+  .menu .portrait .eyeball-game .eye {
+    left: 45%;
+    top: 36%;
+    width: 2.5vw;
+    height: 1.7vw; }
+  .menu .navigation .navigation-listItem {
+    margin: 1rem 0 1rem 1rem; }
+    .menu .navigation .navigation-listItem .navigation-link {
+      font-size: 1.1rem; }
+  main#home {
+    line-height: 1.5; }
+    main#home h1 {
+      color: white;
+      margin-top: 15vh;
+      font-size: 1.5rem; }
+    main#home h2 {
+      font-size: 1rem; } }
