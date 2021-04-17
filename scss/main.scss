@@ -22,6 +22,11 @@ $show-image: true;
     }
   }
 }
+@mixin mediaSm() {
+  @media screen and (max-width: 600px) {
+    @content;
+  }
+}
 
 * {
   margin: 0;
@@ -184,5 +189,44 @@ main {
 @for $x from 1 through 4 {
   .navigation-listItem:nth-child(#{$x}) {
     transition-delay: $x * 0.12s;
+  }
+}
+@include mediaSm {
+  .menu {
+    .portrait {
+      .eyeball-game {
+        .portrait-img {
+          height: 35vw;
+          width: 35vw;
+        }
+        .eye {
+          left: 45%;
+          top: 36%;
+          width: 2.5vw;
+          height: 1.7vw;
+        }
+      }
+    }
+    .navigation {
+      .navigation-listItem {
+        margin: 1rem 0 1rem 1rem;
+        .navigation-link {
+          font-size: 1.1rem;
+        }
+      }
+    }
+  }
+  main {
+    &#home {
+      line-height: 1.5;
+      h1 {
+        color: white;
+        margin-top: 15vh;
+        font-size: 1.5rem;
+      }
+      h2 {
+        font-size: 1rem;
+      }
+    }
   }
 }
